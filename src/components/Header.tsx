@@ -23,7 +23,7 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
           </div>
           <input
             type="text"
-            className="py-2 pl-10 pr-4 w-64 bg-gray-100 border-none rounded-md focus:ring-2 focus:ring-purple-light focus:outline-none placeholder-gray-400 text-sm"
+            className="py-2 pl-10 pr-4 w-64 bg-gray-100 border-none rounded-md focus:ring-2 focus:ring-[#6C68C0] focus:outline-none placeholder-gray-400 text-sm"
             placeholder="Search"
           />
         </div>
@@ -38,7 +38,7 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
         
         <button className="relative text-gray-700 hover:text-gray-900">
           <Bell size={20} />
-          <span className="absolute top-0 right-0 h-2 w-2 bg-purple-light rounded-full"></span>
+          <span className="absolute top-0 right-0 h-2 w-2 bg-[#6C68C0] rounded-full"></span>
         </button>
         
         <div className="flex items-center gap-2">

@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 
 interface StatIconProps {
   children: ReactNode;
-  color: 'purple' | 'green' | 'red';
+  color: 'purple' | 'green' | 'red' | 'transparent';
   className?: string;
 }
 
@@ -16,6 +16,7 @@ const StatIcon: React.FC<StatIconProps> = ({ children, color, className }) => {
           "bg-purple-100": color === 'purple',
           "bg-green-100": color === 'green',
           "bg-red-100": color === 'red',
+          "bg-transparent": color === 'transparent',
         },
         className
       )}

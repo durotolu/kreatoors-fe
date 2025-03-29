@@ -7,7 +7,7 @@ import MetricCard from '@/components/MetricCard';
 import Sidebar from '@/components/Sidebar';
 import StatIcon from '@/components/StatIcon';
 import TeamTable from '@/components/TeamTable';
-import { BarChart, Heart, Share } from 'lucide-react';
+import { BarChart, Heart, MessageCircleQuestion, Share } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -27,7 +27,14 @@ const Index = () => {
               
               <div className="flex items-center gap-3">
                 <DateFilter label="Last 30 Days" />
-                <ExportButton label="Export Report" />
+                <ExportButton 
+                    icon={
+                        <StatIcon color="transparent">
+                            <MessageCircleQuestion size={16} className="text-white" />
+                        </StatIcon>
+                    }
+                    label="Export Report"
+                />
               </div>
             </div>
             
@@ -62,7 +69,7 @@ const Index = () => {
                 title="Engagement Rate"
                 value="4.8%"
                 subtitle="Daily Average"
-                change={{ value: "2.1%", positive: false }}
+                change={{ value: "-2.1%", positive: false }}
                 metric="avg rate"
                 icon={
                   <StatIcon color="red">

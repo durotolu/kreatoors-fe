@@ -1,4 +1,5 @@
 
+import { MoreHorizontal } from 'lucide-react';
 import {
     Area,
     AreaChart,
@@ -48,7 +49,7 @@ const ChartSection: React.FC<ChartSectionProps> = ({ title, chartType, className
         {chartType === 'area' && (
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-purple-light"></div>
+              <div className="w-3 h-3 rounded-full bg-[#6C68C0]"></div>
               <span className="text-sm text-gray-600">Shares</span>
             </div>
             <div className="flex items-center gap-2">
@@ -57,6 +58,10 @@ const ChartSection: React.FC<ChartSectionProps> = ({ title, chartType, className
             </div>
           </div>
         )}
+                
+        {chartType === 'bar' && <button className="text-gray-400 hover:text-gray-600">
+          <MoreHorizontal size={20} />
+        </button>}
       </div>
       
       <div className="h-60">

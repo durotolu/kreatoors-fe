@@ -55,7 +55,7 @@ const TeamTable: React.FC = () => {
     <div className="bg-white rounded-lg p-5">
       <div className="flex items-center justify-between mb-6">
         <h3 className="font-medium text-gray-800">Top Team Advocates</h3>
-        <button className="text-sm text-purple-light hover:underline">
+        <button className="text-sm text-[#6C68C0] hover:underline">
           View All
         </button>
       </div>

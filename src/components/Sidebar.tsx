@@ -22,7 +22,7 @@ const SidebarItem = ({ icon: Icon, label, active, hasSubMenu, expanded }: Sideba
   return (
     <li className={cn(
       "flex items-center gap-3 px-3 py-2 rounded-md cursor-pointer transition-colors",
-      active ? "bg-purple-light text-white" : "hover:bg-gray-100 text-gray-700"
+      active ? "text-[#6A67AF]" : "hover:bg-gray-100 text-[#667085]"
     )}>
       <Icon size={20} />
       <span className="text-sm font-medium">{label}</span>
@@ -63,7 +63,7 @@ const Sidebar = () => {
       </div>
       
       <div className="px-3 mb-4">
-        <button className="w-full bg-purple-light hover:bg-purple text-white rounded-md flex items-center justify-center gap-2 py-2 px-4 transition-colors">
+        <button className="w-full bg-[#6A67AF] hover:bg-purple text-white rounded-md flex items-center justify-center gap-2 py-2 px-4 transition-colors">
           <Plus size={16} />
           <span className="text-sm font-medium">Create a Post</span>
         </button>
@@ -71,26 +71,26 @@ const Sidebar = () => {
       
       <nav className="flex-1">
         <ul className="space-y-6 px-3">
-          <SidebarItem icon={Briefcase} label="Main Workspace" />
+          <SidebarItem icon={Briefcase} label="Main Workspace" active />
           <SidebarItem icon={Home} label="Personal Growth Hub" />
           <SidebarItem icon={FileText} label="Content Studio" hasSubMenu expanded />
           <SidebarItem icon={Users} label="Advocacy Hub" hasSubMenu expanded />
           <SidebarItem icon={Users} label="Community Hub" hasSubMenu expanded />
-          <SidebarItem icon={BarChart} label="Analytics Hub" active />
+          <SidebarItem icon={BarChart} label="Analytics Hub" />
           <SidebarItem icon={Settings} label="Settings" />
         </ul>
       </nav>
       
       <div className="p-4 border-t border-gray-200">
-        <div className="bg-gray-100 rounded-md p-3 space-y-2">
+        <div className="bg-[#6A67AF] rounded-md p-3 space-y-2">
           <div className="flex items-center justify-between text-sm">
-            <span className="text-gray-600">Remaining Tokens</span>
-            <span className="font-semibold">4/10</span>
+            <span className="text-white">Remaining Tokens</span>
+            <span className="font-semibold text-white">4/10</span>
           </div>
           <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-            <div className="h-full bg-purple-light rounded-full" style={{ width: '40%' }}></div>
+            <div className="h-full bg-white rounded-full" style={{ width: '40%' }}></div>
           </div>
-          <button className="w-full flex items-center justify-center gap-2 text-purple text-sm font-medium hover:underline">
+          <button className="w-full flex items-center justify-start gap-2 text-white text-sm font-medium hover:underline">
             <span>Upgrade Plan</span>
             <svg 
               width="16" 
