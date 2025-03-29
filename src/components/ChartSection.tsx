@@ -12,7 +12,6 @@ import {
     YAxis
 } from 'recharts';
 
-// Sharing activity trend data
 const sharingData = [
   { day: 'Day 1', shares: 200, impressions: 120 },
   { day: 'Day 2', shares: 300, impressions: 180 },
@@ -23,7 +22,6 @@ const sharingData = [
   { day: 'Day 7', shares: 290, impressions: 280 },
 ];
 
-// Engagement by content type data
 const engagementData = [
   { day: 'Day 1', value: 320 },
   { day: 'Day 2', value: 380 },
@@ -99,8 +97,8 @@ const ChartSection: React.FC<ChartSectionProps> = ({ title, chartType, className
             <BarChart data={engagementData} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
               <defs>
                 <linearGradient id="colorValue" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#9b87f5" stopOpacity={0.8}/>
-                  <stop offset="95%" stopColor="#9b87f5" stopOpacity={0.6}/>
+                  <stop offset="5%" stopColor="#8581E7" stopOpacity={0.8}/>
+                  <stop offset="95%" stopColor="#8581E7" stopOpacity={0.6}/>
                 </linearGradient>
               </defs>
               <XAxis dataKey="day" tickLine={false} axisLine={false} />
@@ -111,7 +109,7 @@ const ChartSection: React.FC<ChartSectionProps> = ({ title, chartType, className
                 dataKey="value" 
                 fill="url(#colorValue)" 
                 radius={[4, 4, 0, 0]} 
-                barSize={30} 
+                barSize={40} 
               />
             </BarChart>
           )}
