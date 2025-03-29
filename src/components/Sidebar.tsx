@@ -1,13 +1,14 @@
 
 import { cn } from '@/lib/utils';
 import {
-    BarChart,
-    Briefcase,
-    FileText,
-    Home,
+    Banknote,
+    Grid2X2,
+    ChartNoAxesCombined,
     Plus,
     Settings,
-    Users
+    Grid2x2X,
+    FileSearch2,
+    Spline
 } from 'lucide-react';
 
 type SidebarItemProps = {
@@ -71,12 +72,12 @@ const Sidebar = () => {
       
       <nav className="flex-1">
         <ul className="space-y-6 px-3">
-          <SidebarItem icon={Briefcase} label="Main Workspace" active />
-          <SidebarItem icon={Home} label="Personal Growth Hub" />
-          <SidebarItem icon={FileText} label="Content Studio" hasSubMenu expanded />
-          <SidebarItem icon={Users} label="Advocacy Hub" hasSubMenu expanded />
-          <SidebarItem icon={Users} label="Community Hub" hasSubMenu expanded />
-          <SidebarItem icon={BarChart} label="Analytics Hub" />
+          <SidebarItem icon={Grid2X2} label="Main Workspace" active />
+          <SidebarItem icon={ChartNoAxesCombined} label="Personal Growth Hub" />
+          <SidebarItem icon={Banknote} label="Content Studio" hasSubMenu expanded />
+          <SidebarItem icon={Grid2x2X} label="Advocacy Hub" hasSubMenu expanded />
+          <SidebarItem icon={FileSearch2} label="Community Hub" hasSubMenu expanded />
+          <SidebarItem icon={Spline} label="Analytics Hub" />
           <SidebarItem icon={Settings} label="Settings" />
         </ul>
       </nav>

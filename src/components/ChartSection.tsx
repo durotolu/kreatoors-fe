@@ -79,7 +79,7 @@ const ChartSection: React.FC<ChartSectionProps> = ({ title, chartType, className
                 </linearGradient>
               </defs>
               <XAxis dataKey="day" tickLine={false} axisLine={false} />
-              <YAxis hide={true} />
+              <YAxis tickLine={false} axisLine={false} tick={{ fill: '#6b7280', fontSize: 12 }} domain={[0, 600]} />
               <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f0f0f0" />
               <Tooltip />
               <Area 
@@ -104,7 +104,7 @@ const ChartSection: React.FC<ChartSectionProps> = ({ title, chartType, className
                 </linearGradient>
               </defs>
               <XAxis dataKey="day" tickLine={false} axisLine={false} />
-              <YAxis hide={true} />
+              <YAxis tickLine={false} axisLine={false} tick={{ fill: '#6b7280', fontSize: 12 }} domain={[0, 600]} />
               <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f0f0f0" />
               <Tooltip cursor />
               <Bar 

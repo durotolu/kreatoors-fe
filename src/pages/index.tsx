@@ -69,7 +69,7 @@ const Index = () => {
                 title="Engagement Rate"
                 value="4.8%"
                 subtitle="Daily Average"
-                change={{ value: "-2.1%", positive: false }}
+                change={{ value: "2.1%", positive: false }}
                 metric="avg rate"
                 icon={
                   <StatIcon color="red">

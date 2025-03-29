@@ -1,5 +1,5 @@
 
-import { ArrowUpRight } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
 
 interface TeamData {
   id: string;
@@ -68,7 +68,7 @@ const TeamTable: React.FC = () => {
               <th className="pb-3 font-medium">Shares</th>
               <th className="pb-3 font-medium">Impressions</th>
               <th className="pb-3 font-medium">Engagement Rate</th>
-              <th className="pb-3 font-medium">Trend</th>
+              <th className="pb-3 font-medium text-right">Trend</th>
             </tr>
           </thead>
           <tbody>
@@ -88,9 +88,9 @@ const TeamTable: React.FC = () => {
                 <td className="py-4">{team.shares}</td>
                 <td className="py-4">{team.impressions}</td>
                 <td className="py-4">{team.engagementRate}</td>
-                <td className="py-4">
-                  <div className="flex items-center gap-1 text-green-500">
-                    <ArrowUpRight size={16} />
+                <td className="py-4 text-right">
+                  <div className="flex items-center gap-1 text-green-500 justify-end">
+                    <TrendingUp size={16} />
                   </div>
                 </td>
               </tr>
