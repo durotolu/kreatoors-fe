@@ -10,6 +10,7 @@ import {
     FileSearch2,
     Spline
 } from 'lucide-react';
+import React from 'react';
 
 type SidebarItemProps = {
   icon: React.ElementType;
@@ -44,8 +45,14 @@ const SidebarItem = ({ icon: Icon, label, active, hasSubMenu, expanded }: Sideba
 };
 
 const Sidebar = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
+  
   return (
-    <div className="w-60 min-h-screen bg-white border-r border-gray-200 flex flex-col space-y-4">
+    <div className={cn(
+      "fixed md:relative z-50 md:z-auto w-60 min-h-screen bg-white border-r border-gray-200 flex flex-col space-y-4 transition-transform duration-300 ease-in-out",
+      "md:translate-x-0",
+      isOpen ? "translate-x-0" : "-translate-x-full"
+    )}>
       <div className="p-4">
         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="48" height="48" rx="24" fill="#6A67AF"/>
@@ -109,8 +116,28 @@ const Sidebar = () => {
           </button>
         </div>
       </div>
+      <button 
+        className="md:hidden fixed top-4 left-4 z-50 p-2 rounded-md bg-[#6A67AF] text-white"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <svg 
+          width="24" 
+          height="24" 
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="currentColor" 
+          strokeWidth="2" 
+          strokeLinecap="round" 
+          strokeLinejoin="round"
+        >
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
     </div>
   );
 };
+
 
 export default Sidebar;

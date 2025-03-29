@@ -19,7 +19,7 @@ const Index = () => {
           <Header title="Analytics" />
           
           <div className="py-6">
-            <div className="flex justify-between items-center mb-6">
+            <div className="flex justify-between items-center mb-6 max-md:flex-col max-md:space-y-4 max-md:text-center">
               <div>
                 <h2 className="text-xl font-semibold text-gray-800">Advocacy Impact Dashboard</h2>
                 <p className="text-gray-500 text-sm">Brand Amplification & Employee Advocacy Metrics</p>

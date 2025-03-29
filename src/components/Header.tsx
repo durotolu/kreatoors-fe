@@ -8,32 +8,35 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ title }) => {
   return (
-    <header className="flex items-center justify-between py-4 border-b border-gray-200">
-      <div className="flex items-center gap-6">
+    <header className="flex flex-col md:flex-row items-center justify-between py-4 border-b border-gray-200 gap-4 md:gap-0">
+      <div className="flex items-center gap-4 md:gap-6 w-full md:w-auto justify-between md:justify-start">
         <button className="text-gray-700 hover:text-gray-900">
           <ArrowLeft size={20} />
         </button>
-        <h1 className="text-xl font-semibold">{title}</h1>
+        <h1 className="text-lg md:text-xl font-semibold">{title}</h1>
       </div>
       
-      <div className="flex items-center gap-6">
-        <div className="relative">
+      <div className="flex items-center gap-4 md:gap-6 w-full md:w-auto justify-between md:justify-end">
+        <div className="relative hidden md:block">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <Search className="h-4 w-4 text-gray-400" />
           </div>
           <input
             type="text"
-            className="py-2 pl-10 pr-4 w-64 bg-gray-100 border-none rounded-md focus:ring-2 focus:ring-[#6C68C0] focus:outline-none placeholder-gray-400 text-sm"
+            className="py-2 pl-10 pr-4 w-40 md:w-64 bg-gray-100 border-none rounded-md focus:ring-2 focus:ring-[#6C68C0] focus:outline-none placeholder-gray-400 text-sm"
             placeholder="Search"
           />
         </div>
+        <button className="md:hidden text-gray-700 hover:text-gray-900">
+          <Search size={20} />
+        </button>
         
         <button className={cn(
-          "flex items-center gap-2 px-4 py-2 rounded-md font-medium",
+          "hidden md:flex items-center gap-2 px-3 md:px-4 py-2 rounded-md font-medium",
           "bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors"
         )}>
           <BarChart size={16} />
-          <span>Analytics</span>
+          <span className="hidden lg:inline">Analytics</span>
         </button>
         
         <button className="relative text-gray-700 hover:text-gray-900">
